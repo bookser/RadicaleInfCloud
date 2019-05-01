@@ -1124,8 +1124,8 @@ var globalContactStoreFN=['prefix',' last',' middle',' first',' suffix'];
 // If undefined then 1.5 is used, if set to null (not recommended) then the
 // original size of the image is retained (resize functionality is disabled).
 // Examples:
-   var globalContactPhotoScaleFactor=1.5;
-//   var globalContactPhotoScaleFactor=null;
+//   var globalContactPhotoScaleFactor=1.5;
+   var globalContactPhotoScaleFactor=null;
 
 
 // globalGroupContactsByCompanies
