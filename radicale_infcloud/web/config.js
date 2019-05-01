@@ -1009,7 +1009,7 @@ var globalUriHandlerProfile={
 // all supported country codes (defined in common.js):
 // grep -E "'[a-z]{2}':\s+\[" common.js | sed -Ee 's#^\s+|\s+\[\s+# #g'
 // Example:
-var globalDefaultAddressCountry='us';
+var globalDefaultAddressCountry='cn';
 
 
 // globalAddressCountryEquivalence
