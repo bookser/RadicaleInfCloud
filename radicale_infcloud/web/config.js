@@ -1101,7 +1101,7 @@ var globalAddressCountryFavorites=[];
 // Examples:
 //   var globalContactStoreFN=[' last', ' middle', ' first'];
 //   var globalContactStoreFN=['last', ', middle', ' ,first'];
-var globalContactStoreFN=['prefix',' last'];
+var globalContactStoreFN=['prefix',' last',' middle',' first',' suffix'];
 
 
 // globalContactPhotoType
