@@ -13,10 +13,14 @@ $ python3 -m pip install --upgrade git+https://github.com/Unrud/RadicaleInfCloud
 ## Configuration
 
 Set the configuration option `type` in the `web` section to ``radicale_infcloud``.
+The value of `infcloud_config` is appended to InfCloud's `config.js`.
 
 ```ini
 [web]
 type = radicale_infcloud
+# Optional InfCloud configuration
+infcloud_config = globalInterfaceLanguage='de_DE';
+                  globalTimeZone='Europe/Berlin';
 ```
 
 ## License
