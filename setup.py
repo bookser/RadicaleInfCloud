@@ -1,28 +1,26 @@
 #!/usr/bin/env python3
 
 import os
-import re
 
 from setuptools import setup
 
-init_path = os.path.join(os.path.dirname(__file__),
-                         "radicale_infcloud", "__init__.py")
-with open(init_path) as f:
-    version = re.search(r'VERSION = "([^"]+)"', f.read()).group(1)
-os.chdir("radicale_infcloud")
-web_data = sum(([os.path.join(root, f) for f in files
-                 if not f.startswith(".") and not f.endswith("~")]
-                for root, _, files in os.walk("web")), [])
-os.chdir(os.pardir)
+VERSION = "3.1.6"
+
+package_path = os.path.join(os.path.dirname(__file__), "radicale_infcloud")
+web_data = sum((
+    [os.path.relpath(os.path.join(root, f), package_path)
+     for f in files if not f.startswith(".") and not f.endswith("~")]
+    for root, _, files in os.walk(os.path.join(package_path, "web"))), [])
 
 setup(
     name="Radicale_InfCloud",
-    version=version,
+    version=VERSION,
     description="InfCloud for Radicale",
     author="Unrud",
-    author_email="unrud@openaliasbox.org",
+    author_email="unrud@outlook.com",
     url="http://github.com/Unrud/RadicaleWeb",
     license="GNU AGPL v3",
     platforms="Any",
     packages=["radicale_infcloud"],
-    package_data={"radicale_infcloud": web_data})
+    package_data={"radicale_infcloud": web_data},
+    install_requires=["radicale>=3.1.6"])
