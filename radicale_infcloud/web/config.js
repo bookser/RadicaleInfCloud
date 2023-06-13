@@ -766,7 +766,7 @@ var globalTimeZone='Asia/Shanghai';
 // that timezone is enabled (even if it is not present in this list).
 // Example:
 //   var globalTimeZonesEnabled=['America/New_York', 'Europe/Berlin'];	
-var globalTimeZonesEnabled=[];
+var globalTimeZonesEnabled=['Asia/Shanghai'];
 
 
 // globalRewriteTimezoneComponent
